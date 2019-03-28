@@ -1,5 +1,7 @@
 package com.sewz.mobile_oa.utils.network;
 
+import android.os.Handler;
+
 import com.sewz.mobile_oa.utils.UrlUtils;
 
 import java.io.IOException;
@@ -34,8 +36,19 @@ public class Mobile_Api {
      * @throws IOException
      */
     public void postData(String loginMethod, Map<String, String> reqParams, Callback b) throws IOException {
-        String url = UrlUtils.SERVER_URL + loginMethod;
-        post(url, reqParams, b);
+
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    String url = UrlUtils.SERVER_URL + loginMethod;
+                    post(url, reqParams, b);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
     }
 
 

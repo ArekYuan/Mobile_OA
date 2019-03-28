@@ -5,10 +5,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.gson.JsonObject;
 import com.sewz.mobile_oa.R;
 import com.sewz.mobile_oa.ui.BaseFragment;
 import com.sewz.mobile_oa.ui.shenpi.adapter.PurchaseAdapter;
@@ -20,6 +22,7 @@ import com.sewz.mobile_oa.utils.dialog.SelectDialog;
 import com.sewz.mobile_oa.utils.network.Mobile_Api;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,6 +31,8 @@ import java.util.Map;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
+import okio.Buffer;
+import okio.BufferedSource;
 
 /**
  * Created by Yuan on 2019/3/24.
@@ -155,6 +160,7 @@ public class PurchaseNoFragment extends BaseFragment {
                         String jsonStr = response.body().string();
                         YLog.d("---gong_gao_resp-->" + jsonStr);
                         PurchaseResp resp = gson.fromJson(jsonStr, PurchaseResp.class);
+
                         LoadDialog.dismiss(mContext);
                         if (resp.getCode().equals("200")) {
                             toRefreshView(resp);
@@ -178,5 +184,7 @@ public class PurchaseNoFragment extends BaseFragment {
         } else {
             gaoAdapter.setRefreshData(dataBeanList);
         }
+
+        gaoAdapter.notifyDataSetChanged();
     }
 }

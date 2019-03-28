@@ -27,7 +27,7 @@ public class PurchaseAdapter extends RecyclerView.Adapter<PurchaseAdapter.ViewHo
     public void setRefreshData(List<PurchaseResp.DataBean> data) {
         this.data.clear();
         this.data.addAll(data);
-        notifyDataSetChanged();
+//        notifyDataSetChanged();
     }
 
     public void setLoadData(List<PurchaseResp.DataBean> data) {
