@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.sewz.mobile_oa.ui.shenqing.activity.BaoXaoSqActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <include layout="@layout/top_layout" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="申请事由*"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/applyReasonEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请填写报销申请事由"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="差旅费-飞机"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/airEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入差旅费-飞机"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="差旅费-高铁"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/TrainFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入差旅费-高铁"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="差旅费-汽车"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/CarFeeFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入差旅费-汽车"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="住宿费"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/HostelFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入住宿费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="业务招待费"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/BusinessFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入业务招待费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="办公费"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/OfficeFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入办公费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="福利费"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/WelfareFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入福利费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="零星物料"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/MaterielFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入零星物料费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="出差补贴"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/TravelFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入出差补贴"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="快递费"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/ExpressFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入快递费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="其他"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/OtherFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入其他费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="宣传费"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/AdvertFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入宣传费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="研发费"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/DevelopFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入研发费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="服务费"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/ServiceFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入服务费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="交通费"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/TrafficFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入交通费"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="合计"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/TotalFeeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入合计费用"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/bottom_layout" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/commitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/pink_btn_bg_shape"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

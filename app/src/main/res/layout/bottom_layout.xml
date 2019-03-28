@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/divider_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="上传附件"
+                android:textColor="@color/text_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/sizeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="0/2"
+                android:textColor="@color/color_909399"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/showPhotoView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/divider_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="审批人"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/shenPiUserTxt"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="0.8"
+            android:drawableRight="@mipmap/arrow_right"
+            android:gravity="center|left"
+            android:hint="请选择审批人"
+            android:paddingLeft="16dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/divider_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="抄送人"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/ChaoSongUserTxt"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="0.8"
+            android:drawableRight="@mipmap/arrow_right"
+            android:gravity="left|center"
+            android:hint="请选择抄送人"
+            android:paddingLeft="16dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</LinearLayout>

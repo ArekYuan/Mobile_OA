@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.sewz.mobile_oa.ui.shenqing.activity.PuchaseSqActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <include layout="@layout/top_layout" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="物品名称"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/P_GoodsNameEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:gravity="center|left"
+                    android:hint="请选择物品名称"
+                    android:paddingLeft="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="采购数量"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/P_NumEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入采购数量"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="采购预算"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/P_BudgetEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="请输入采购预算"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="采购部门"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/P_DepartmentEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:gravity="left|center"
+                    android:hint="请选择采购部门"
+                    android:paddingLeft="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="采购备注"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.sewz.mobile_oa.utils.widget.ClearEditText
+                    android:id="@+id/P_RemarkEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:gravity="center|left"
+                    android:hint="请输入采购备注"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+            <include layout="@layout/bottom_layout" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/commitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/pink_btn_bg_shape"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>
